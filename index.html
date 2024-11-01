@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoFreeze - Site Unique</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showSection(section) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach((sec) => {
+                sec.style.display = 'none';
+            });
+            document.getElementById(section).style.display = 'block';
+        }
+        window.onload = () => showSection('home'); // Affiche la section d'accueil par défaut
+    </script>
+    <style>
+        /* Styles pour la boîte de valeurs environnementales */
+        .values-box {
+            border: 1px solid #4CAF50; /* Bordure verte */
+            border-radius: 5px; /* Coins arrondis */
+            padding: 15px; /* Espacement interne */
+            background-color: #f9f9f9; /* Couleur de fond de la boîte */
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Ombre */
+            margin: 20px auto; /* Marge auto pour centrer la boîte */
+            width: 80%; /* Largeur réduite de la boîte */
+            max-width: 600px; /* Largeur maximale pour la boîte */
+        }
+
+        .btn {
+            background-color: #4CAF50; /* Couleur de fond initiale */
+            color: white; /* Couleur du texte */
+            padding: 10px 15px; /* Espacement interne */
+            border: none; /* Pas de bordure */
+            border-radius: 5px; /* Coins arrondis */
+            cursor: pointer; /* Curseur en forme de main */
+            text-decoration: none; /* Pas de soulignement */
+            display: inline-block; /* Affichage en ligne */
+            margin: 5px; /* Marge autour des boutons */
+        }
+
+        .btn:hover {
+            background-color: #367c39; /* Couleur de fond au survol */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EcoFreeze</h1>
+        <nav>
+            <ul>
+                <li><a class="btn" href="javascript:void(0);" onclick="showSection('home')">Accueil</a></li>
+                <li><a class="btn" href="javascript:void(0);" onclick="showSection('login')">Se connecter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="home" class="section">
+        <div class="banner">
+            <h2>Frigos intelligents pour un avenir durable</h2>
+        </div>
+        <div class="container">
+            <div class="card">
+                <h3>Frigo EcoFreeze 1</h3>
+                <p>Prix: 749$</p>
+                <a class="btn" href="javascript:void(0);" onclick="showSection('fridge-details-1')">Détails</a>
+            </div>
+            <div class="card">
+                <h3>Frigo EcoFreeze 2</h3>
+                <p>Prix: 1499$</p>
+                <a class="btn" href="javascript:void(0);" onclick="showSection('fridge-details-2')">Détails</a>
+            </div>
+            <div class="card">
+                <h3>Frigo EcoFreeze 3</h3>
+                <p>Prix: 2199$</p>
+                <a class="btn" href="javascript:void(0);" onclick="showSection('fridge-details-3')">Détails</a>
+            </div>
+        </div>
+        
+        <div class="values-box">
+            <h2>Valeurs environnementales</h2>
+            <ul>
+                <li>Réduction du gaspillage alimentaire grâce à des alertes de péremption.</li>
+                <li>Conception durable pour minimiser l'impact environnemental.</li>
+                <li>Technologie écoénergétique pour réduire la consommation d'énergie.</li>
+                <li>Sensibilisation à l'importance du recyclage des appareils électroménagers.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="fridge-details-1" class="section" style="display:none;">
+        <h2>Détails du Frigo EcoFreeze 1</h2>
+        <p>Notre taille de frigo la plus petite, idéal pour un couple ou un étudiant, vous pouvez choisir différentes couleurs:</p>
+        <ul>
+            <li>Bleu</li>
+            <li>Gris</li>
+            <li>Noir</li>
+        </ul>
+        <p>Prix: 749$</p>
+        <button class="btn" onclick="showSection('home')">Retour à l'accueil</button>
+    </div>
+
+    <div id="fridge-details-2" class="section" style="display:none;">
+        <h2>Détails du Frigo EcoFreeze 2</h2>
+        <p>Notre taille de frigo moyenne, idéal pour une petite famille, vous pouvez choisir différentes couleurs:</p>
+        <ul>
+            <li>Bleu</li>
+            <li>Gris</li>
+            <li>Noir</li>
+        </ul>
+        <p>Prix: 1499$</p>
+        <button class="btn" onclick="showSection('home')">Retour à l'accueil</button>
+    </div>
+
+    <div id="fridge-details-3" class="section" style="display:none;">
+        <h2>Détails du Frigo EcoFreeze 3</h2>
+         <p>Notre taille de frigo maximale, idéal pour les grands ménages, vous pouvez choisir différentes couleurs:</p>
+         <ul>
+            <li>Bleu</li>
+            <li>Gris</li>
+            <li>Noir</li>
+         </ul>
+        <p>Prix: 2199$</p>
+        <button class="btn" onclick="showSection('home')">Retour à l'accueil</button>
+    </div>
+
+    <div id="login" class="section" style="display:none;">
+        <h2>Connexion</h2>
+        <form>
+            <label for="username">Nom d'utilisateur:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+            <button class="btn" type="submit">Se connecter</button>
+        </form>
+        <button class="btn" onclick="showSection('home')">Retour à l'accueil</button>
+    </div>
+
+  <div data-tf-live="01JBM6C8VJM5AN3RH8CSW6NS1X"></div><script src="//embed.typeform.com/next/embed.js"></script>
+
+    <footer>
+        <p>&copy; 2024 EcoFreeze.</p>
+    </footer>
+</body>
+</html>
